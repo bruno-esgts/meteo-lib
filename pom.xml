@@ -6,7 +6,7 @@
 
     <groupId>pt.brunojesus.esg.meteo</groupId>
     <artifactId>meteo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -19,12 +19,13 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.2.2</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>mvn-brunojesus</id>
+            <name>Bruno Jesus MVN Repo</name>
+            <url>https://mvn.brunojesus.pt/releases</url>
+        </repository>
+    </distributionManagement>
 </project>
