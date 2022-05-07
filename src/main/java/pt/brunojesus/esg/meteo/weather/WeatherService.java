@@ -1,7 +1,6 @@
 package pt.brunojesus.esg.meteo.weather;
 
 import pt.brunojesus.esg.meteo.exception.WeatherNotFoundException;
-import pt.brunojesus.esg.meteo.geo.model.Coordinate;
 import pt.brunojesus.esg.meteo.mapping.JsonBodyHandler;
 import pt.brunojesus.esg.meteo.weather.model.Weather;
 
