@@ -7,6 +7,13 @@ import pt.brunojesus.esg.meteo.geo.model.Coordinate;
 import pt.brunojesus.esg.meteo.weather.WeatherService;
 import pt.brunojesus.esg.meteo.weather.model.Weather;
 
+/**
+ * Library's facade, exposes all important features of the library.
+ *
+ * @author Bruno Jesus
+ * @since 2022-05-07
+ * @version 1.0
+ */
 public class MeteoAPI {
 
     private final WeatherService weatherService;
