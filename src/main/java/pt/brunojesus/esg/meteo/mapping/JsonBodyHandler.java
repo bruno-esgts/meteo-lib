@@ -38,8 +38,7 @@ public class JsonBodyHandler<T> implements HttpResponse.BodyHandler<Supplier<T>>
     public static <W> Supplier<W> toSupplierOfType(InputStream inputStream, Class<W> targetType) {
         return () -> {
             try (InputStream stream = inputStream) {
-                ObjectMapper objectMapper = new ObjectMapper();
-                return objectMapper.readValue(stream, targetType);
+                return om.readValue(stream, targetType);
             } catch (IOException e) {
                 throw new UncheckedIOException(e);
             }
