@@ -5,22 +5,40 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
+/**
+ * Represents a coordinate for the Geolocation API
+ *
+ * @author Bruno Jesus
+ * @since 2022-05-07
+ * @version 1.0
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Coordinate {
 
     private final double latitude;
     private final double longitude;
 
-    public Coordinate(@JsonProperty("longt") double longitude,
-                      @JsonProperty("latt") double latitude) {
-        this.latitude = latitude;
+    public Coordinate(
+            @JsonProperty("latt") double latitude,
+            @JsonProperty("longt") double longitude) {
         this.longitude = longitude;
+        this.latitude = latitude;
     }
 
+    /**
+     * The latitude
+     *
+     * @return latitude
+     */
     public double getLatitude() {
         return latitude;
     }
 
+    /**
+     * The longitude
+     *
+     * @return longitude
+     */
     public double getLongitude() {
         return longitude;
     }

@@ -8,6 +8,10 @@ import java.io.UncheckedIOException;
 import java.net.http.HttpResponse;
 import java.util.function.Supplier;
 
+/**
+ * Converts a JSON HTTP response to an Object of the given class
+ * @param <T> The target class
+ */
 public class JsonBodyHandler<T> implements HttpResponse.BodyHandler<Supplier<T>> {
 
     private static final ObjectMapper om = new ObjectMapper();
