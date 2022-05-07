@@ -5,6 +5,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Objects;
 
+/**
+ * Represents the weather for a specific location
+ *
+ * @author Bruno Jesus
+ * @since 2022-05-07
+ * @version 1.0
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Weather {
 
@@ -24,18 +31,38 @@ public class Weather {
         this.currentWeather = currentWeather;
     }
 
+    /**
+     * The latitude
+     *
+     * @return the latitude
+     */
     public Double getLatitude() {
         return latitude;
     }
 
+    /**
+     * The longitude
+     *
+     * @return the longitude
+     */
     public Double getLongitude() {
         return longitude;
     }
 
+    /**
+     * Gets the elevation in meters
+     *
+     * @return the elevation
+     */
     public Double getElevation() {
         return elevation;
     }
 
+    /**
+     * The current weather conditions
+     *
+     * @return current weather conditions
+     */
     public CurrentWeather getCurrentWeather() {
         return currentWeather;
     }
@@ -51,5 +78,14 @@ public class Weather {
     @Override
     public int hashCode() {
         return Objects.hash(latitude, longitude, elevation, currentWeather);
+    }
+
+    @Override
+    public String toString() {
+        return "Weather{" + "latitude=" + latitude +
+                ", longitude=" + longitude +
+                ", elevation=" + elevation +
+                ", currentWeather=" + currentWeather +
+                '}';
     }
 }
